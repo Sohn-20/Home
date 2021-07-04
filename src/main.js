@@ -11,17 +11,17 @@ import '@mdi/font/css/materialdesignicons.css'
 Vue.config.productionTip = false
 
 export function createApp(ctx) {
-  const router = createRouter();
-  const store = createStore();
-  sync(store, router);
+	const router = createRouter();
+	const store = createStore();
+	sync(store, router);
 
-  const app = new Vue({
-    data: { url: ctx ? ctx.url : '' },
-    router,
-    store,
-    vuetify,
-    render: h => h(App)
-  });
+	const app = new Vue({
+		data: { url: ctx ? ctx.url : '' },
+		router,
+		store,
+		vuetify,
+		render: h => h(App)
+	});
 
-  return { app, router, store };
+	return { app, router, store };
 }

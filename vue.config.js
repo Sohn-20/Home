@@ -1,4 +1,3 @@
-// vue로 만들어둔 것을 세팅하는 작업
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
@@ -42,7 +41,6 @@ const cilentConfig = {
 		},
 	},
 	plugins: [
-    // webpack이란? https://webpack.js.org/ : 같은 것들끼리 자동으로 번들로 묶어서 한다.
 		new webpack.DefinePlugin({
 			'process.env.VUE_ENV': JSON.stringify(process.env.VUE_ENV || 'client'),
 		}),
